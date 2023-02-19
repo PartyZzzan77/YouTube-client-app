@@ -9,6 +9,7 @@ import { CardsListComponent } from './components/main/cards-list/cards-list.comp
 import { CardComponent } from './components/main/card/card.component';
 import { SearchComponent } from './components/header/search/search.component';
 import { FilterComponent } from './components/header/filter/filter.component';
+import { AccountComponent } from './components/header/account/account.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FilterComponent } from './components/header/filter/filter.component';
     CardComponent,
     SearchComponent,
     FilterComponent,
+    AccountComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
