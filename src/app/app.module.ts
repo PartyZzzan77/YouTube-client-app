@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { CardsListComponent } from './components/main/cards-list/cards-list.component';
-import { CardsComponent } from './components/main/cards/cards.component';
+import { CardComponent } from './components/main/card/card.component';
 import { SearchComponent } from './components/header/search/search.component';
 import { FilterComponent } from './components/header/filter/filter.component';
 
@@ -16,7 +16,7 @@ import { FilterComponent } from './components/header/filter/filter.component';
     HeaderComponent,
     MainComponent,
     CardsListComponent,
-    CardsComponent,
+    CardComponent,
     SearchComponent,
     FilterComponent,
   ],
