@@ -1,1 +1,18 @@
-<!--<p>filter works!</p>-->
+<ng-container *ngIf="isShowFilter">
+  <span >{{title|titlecase}}</span>
+
+  <mat-chip-listbox aria-label="Fish selection">
+    <mat-chip-option color="primary">{{dateCriteria|titlecase}}</mat-chip-option>
+    <mat-chip-option color="primary">{{countCriteria|titlecase}}</mat-chip-option>
+    <mat-chip-option color="primary">{{sentanceCriteria|titlecase}}</mat-chip-option>
+  </mat-chip-listbox>
+
+  <mat-form-field style="width: 17.5vw;padding-top: 1.5rem">
+    <mat-label>Search</mat-label>
+    <input   matInput type="text" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+</ng-container>
