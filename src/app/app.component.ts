@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ResponseItem } from './shared/models/response-item/response-item.model';
+import { mockEntities } from './Mocks/mock';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'YouTube-client-app';
+
+  entities: ResponseItem[] = mockEntities;
 }

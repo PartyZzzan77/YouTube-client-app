@@ -1,0 +1,13 @@
+.card__badge{
+  display: inline-flex;
+  gap: .5rem;
+  cursor: pointer;
+  margin-top: .5rem;
+
+}
+
+.card__badge-wrapper{
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+}

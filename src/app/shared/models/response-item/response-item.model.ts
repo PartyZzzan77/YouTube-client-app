@@ -22,6 +22,7 @@ export interface ResponseItem {
     tags: string[];
     categoryId: string;
     liveBroadcastContent: string;
+    defaultLanguage?: string;
     localized: Localized;
     defaultAudioLanguage: string;
   };

@@ -9,11 +9,17 @@ export class SearchComponent {
   value = '';
 
   title = 'search';
+
   btnSearchTitle = 'search';
-  @Output() onShowFilter = new EventEmitter<boolean>();
+
+  @Output() outputShowFilter = new EventEmitter<boolean>();
+
+  clear() {
+    this.value = '';
+  }
 
   showFilter() {
-    this.value = '';
-    this.onShowFilter.emit(true);
+    this.outputShowFilter.emit(true);
+    this.clear();
   }
 }
