@@ -1,5 +1,5 @@
 <div class="search">
-  <app-search></app-search>
+  <app-search (onShowFilter)="showFilter($event)"></app-search>
   <app-filter [isShowFilter]="isShowFilter"></app-filter>
 </div>
 <app-account></app-account>
