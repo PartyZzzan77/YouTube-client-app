@@ -10,7 +10,13 @@ export class HeaderComponent {
 
   @Input() isShowCards: boolean;
 
+  @Input() orderViews: boolean;
+
   @Output() outShowCards = new EventEmitter<boolean>();
+
+  @Output() outFilterCards = new EventEmitter<string>();
+
+  @Output() outOrderViews = new EventEmitter<boolean>();
 
   toggleFilter() {
     this.isShowFilters = !this.isShowFilters;
@@ -18,5 +24,13 @@ export class HeaderComponent {
 
   showCards() {
     this.outShowCards.emit(true);
+  }
+
+  filterCards(value: string) {
+    this.outFilterCards.emit(value);
+  }
+
+  setOrderViews(value: boolean) {
+    this.outOrderViews.emit(value);
   }
 }

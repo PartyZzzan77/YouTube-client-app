@@ -23,7 +23,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatBadgeModule } from '@angular/material/badge';
 import { StatisticsComponent } from './components/main/card/statistics/statistics.component';
-import { PublicationDateStatusDirective } from './publication-date-status.directive';
+import { PublicationDateStatusDirective } from './derectives/publication-date-status.directive';
+import { CardMatchPipe } from './pipes/card-match.pipe';
+import { OrderPipe } from './pipes/order.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { PublicationDateStatusDirective } from './publication-date-status.direct
     AccountComponent,
     StatisticsComponent,
     PublicationDateStatusDirective,
+    CardMatchPipe,
+    OrderPipe,
   ],
   imports: [
     BrowserModule,

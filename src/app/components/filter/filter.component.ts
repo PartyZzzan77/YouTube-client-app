@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -8,13 +8,28 @@ import { Component, Input } from '@angular/core';
 export class FilterComponent {
   @Input() isShowFilters: boolean;
 
+  @Input() orderViews: boolean;
+
   value = '';
+
+  @Output() outFilterCards = new EventEmitter<string>();
+
+  @Output() outOrderViews = new EventEmitter<boolean>();
 
   title = 'sorting by:';
 
-  dateCriteria = 'date';
+  countCriteria = 'views';
 
-  countCriteria = 'count of views';
+  filterCards() {
+    this.outFilterCards.emit(this.value);
+  }
 
-  sentanceCriteria = 'by word or sentance';
+  setOrderViews(value: boolean) {
+    this.outOrderViews.emit(!value);
+  }
+
+  clear() {
+    this.value = '';
+    this.outFilterCards.emit(this.value);
+  }
 }
