@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent {
-  @Input() isShowFilter: boolean | undefined;
+  @Input() isShowFilters: boolean;
 
   value = '';
 

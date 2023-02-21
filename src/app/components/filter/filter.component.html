@@ -1,7 +1,6 @@
-<ng-container *ngIf="isShowFilter">
-  <span >{{title|titlecase}}</span>
+ <span >{{title|titlecase}}</span>
 
-  <mat-chip-listbox aria-label="Fish selection">
+  <mat-chip-listbox aria-label="search filter">
     <mat-chip-option color="primary">{{dateCriteria|titlecase}}</mat-chip-option>
     <mat-chip-option color="primary">{{countCriteria|titlecase}}</mat-chip-option>
     <mat-chip-option color="primary">{{sentanceCriteria|titlecase}}</mat-chip-option>
@@ -14,5 +13,3 @@
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
-
-</ng-container>

@@ -1,5 +1,5 @@
 <div class="search">
-  <app-search (outputShowFilter)="showFilter($event)"></app-search>
-  <app-filter [isShowFilter]="isShowFilter"></app-filter>
+  <app-search (outToggleFilter)="toggleFilter()"></app-search>
+  <app-filter [isShowFilters]="isShowFilters" *ngIf="isShowFilters"></app-filter>
 </div>
 <app-account></app-account>

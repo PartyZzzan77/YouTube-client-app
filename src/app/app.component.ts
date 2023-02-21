@@ -10,5 +10,7 @@ import { mockEntities } from './Mocks/mock';
 export class AppComponent {
   title = 'YouTube-client-app';
 
+  isShowCards = false;
+
   entities: ResponseItem[] = mockEntities;
 }

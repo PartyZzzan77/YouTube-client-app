@@ -7,5 +7,7 @@ import { ResponseItem } from '../../shared/models/response-item/response-item.mo
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
+  @Input() isShowCards: boolean;
+
   @Input() entities: ResponseItem[];
 }
