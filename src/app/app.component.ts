@@ -12,5 +12,9 @@ export class AppComponent {
 
   isShowCards = false;
 
+  showCards() {
+    this.isShowCards = true;
+  }
+
   entities: ResponseItem[] = mockEntities;
 }

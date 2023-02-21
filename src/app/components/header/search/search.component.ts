@@ -8,6 +8,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class SearchComponent {
   @Output() outToggleFilter = new EventEmitter<boolean>();
 
+  @Output() outShowCards = new EventEmitter<boolean>();
+
   value = '';
 
   title = 'search';
@@ -16,6 +18,10 @@ export class SearchComponent {
 
   showFilter() {
     this.outToggleFilter.emit(true);
+  }
+
+  showCards() {
+    this.outShowCards.emit(true);
   }
 
   clear() {

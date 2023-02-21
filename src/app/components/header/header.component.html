@@ -1,5 +1,5 @@
 <div class="search">
-  <app-search (outToggleFilter)="toggleFilter()"></app-search>
+  <app-search (outShowCards)="showCards()" (outToggleFilter)="toggleFilter()"></app-search>
   <app-filter [isShowFilters]="isShowFilters" *ngIf="isShowFilters"></app-filter>
 </div>
 <app-account></app-account>

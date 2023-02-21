@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,15 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   isShowFilters = false;
 
+  @Input() isShowCards: boolean;
+
+  @Output() outShowCards = new EventEmitter<boolean>();
+
   toggleFilter() {
     this.isShowFilters = !this.isShowFilters;
+  }
+
+  showCards() {
+    this.outShowCards.emit(true);
   }
 }
