@@ -1,0 +1,2 @@
+<app-header (outOrderViews)="setOrderViews($event)" (outFilterCards)="filterCards($event)" (outShowCards)="showCards()" [orderViews]="orderViews"></app-header>
+<app-main [isShowCards]="isShowCards" [entities]="entities|order:orderViews|cardMatch:filterSearchString"></app-main>

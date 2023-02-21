@@ -26,10 +26,12 @@ import { StatisticsComponent } from './components/main/card/statistics/statistic
 import { PublicationDateStatusDirective } from './derectives/publication-date-status.directive';
 import { CardMatchPipe } from './pipes/card-match.pipe';
 import { OrderPipe } from './pipes/order.pipe';
+import { SharedRootComponent } from './components/shared-root/shared-root.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SharedRootComponent,
     HeaderComponent,
     MainComponent,
     CardsListComponent,
