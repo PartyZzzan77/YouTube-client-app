@@ -6,31 +6,36 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  isShowFilters = false;
+  @Input()
+  isShowCards: boolean;
 
-  @Input() isShowCards: boolean;
+  @Input()
+  orderViews: boolean;
 
-  @Input() orderViews: boolean;
+  @Output()
+  outShowCards = new EventEmitter<boolean>();
 
-  @Output() outShowCards = new EventEmitter<boolean>();
+  @Output()
+  outFilterCards = new EventEmitter<string>();
 
-  @Output() outFilterCards = new EventEmitter<string>();
+  @Output()
+  outOrderViews = new EventEmitter<boolean>();
 
-  @Output() outOrderViews = new EventEmitter<boolean>();
+  public isShowFilters = false;
 
-  toggleFilter() {
+  public toggleFilter() {
     this.isShowFilters = !this.isShowFilters;
   }
 
-  showCards() {
+  public showCards() {
     this.outShowCards.emit(true);
   }
 
-  filterCards(value: string) {
+  public filterCards(value: string) {
     this.outFilterCards.emit(value);
   }
 
-  setOrderViews(value: boolean) {
+  public setOrderViews(value: boolean) {
     this.outOrderViews.emit(value);
   }
 }

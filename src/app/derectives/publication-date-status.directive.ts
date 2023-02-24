@@ -4,7 +4,8 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
   selector: '[appPublicationDateStatus]',
 })
 export class PublicationDateStatusDirective implements OnInit {
-  @Input('appPublicationDateStatus') date: string;
+  @Input('appPublicationDateStatus')
+  date: string;
 
   constructor(private el: ElementRef) {}
 

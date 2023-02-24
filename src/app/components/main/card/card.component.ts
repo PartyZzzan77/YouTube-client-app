@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ResponseItem } from '../../../shared/models/response-item/response-item.model';
+import { ResponseItem } from 'src/app/shared/models/response-item/response-item.model';
 
 @Component({
   selector: 'app-card',
@@ -7,11 +7,12 @@ import { ResponseItem } from '../../../shared/models/response-item/response-item
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  title = 'more...';
+  @Input()
+  entity: ResponseItem;
 
-  publicationDate = '';
+  public title = 'more...';
 
-  @Input() entity: ResponseItem;
+  public publicationDate = '';
 
   ngOnInit() {
     this.publicationDate = this.entity.snippet.publishedAt;

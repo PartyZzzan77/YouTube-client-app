@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Statistics } from '../../../../shared/models/response-item/statistics.model';
+import { Statistics } from 'src/app/shared/models/response-item/statistics.model';
 
 @Component({
   selector: 'app-statistics',
@@ -7,5 +7,6 @@ import { Statistics } from '../../../../shared/models/response-item/statistics.m
   styleUrls: ['./statistics.component.scss'],
 })
 export class StatisticsComponent {
-  @Input() statistics: Statistics;
+  @Input()
+  statistics: Statistics;
 }

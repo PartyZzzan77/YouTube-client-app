@@ -9,7 +9,11 @@
    <app-statistics [statistics]="entity.statistics"></app-statistics>
 
     </mat-card-content>
-  <mat-card-footer class="card__footer" [appPublicationDateStatus]="publicationDate">
-    <button class="card__btn" mat-raised-button color="accent">{{title|titlecase}}</button>
+  <mat-card-footer
+    class="card__footer"
+    [appPublicationDateStatus]="publicationDate">
+    <button
+      class="card__btn"
+      mat-raised-button color="accent">{{title|titlecase}}</button>
   </mat-card-footer>
 </mat-card>

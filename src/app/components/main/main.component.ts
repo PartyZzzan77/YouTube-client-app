@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ResponseItem } from '../../shared/models/response-item/response-item.model';
+import { ResponseItem } from 'src/app/shared/models/response-item/response-item.model';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +7,9 @@ import { ResponseItem } from '../../shared/models/response-item/response-item.mo
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
-  @Input() isShowCards: boolean;
+  @Input()
+  isShowCards: boolean;
 
-  @Input() entities: ResponseItem[];
+  @Input()
+  entities: ResponseItem[];
 }

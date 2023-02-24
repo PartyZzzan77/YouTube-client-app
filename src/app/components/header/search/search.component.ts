@@ -6,25 +6,27 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
-  @Output() outToggleFilter = new EventEmitter<boolean>();
+  @Output()
+  outToggleFilter = new EventEmitter<boolean>();
 
-  @Output() outShowCards = new EventEmitter<boolean>();
+  @Output()
+  outShowCards = new EventEmitter<boolean>();
 
-  value = '';
+  public value = '';
 
-  title = 'search';
+  public title = 'search';
 
-  btnSearchTitle = 'search';
+  public btnSearchTitle = 'search';
 
-  showFilter() {
+  public showFilter() {
     this.outToggleFilter.emit(true);
   }
 
-  showCards() {
+  public showCards() {
     this.outShowCards.emit(true);
   }
 
-  clear() {
+  public clear() {
     this.value = '';
   }
 }

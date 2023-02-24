@@ -6,29 +6,33 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent {
-  @Input() isShowFilters: boolean;
+  @Input()
+  isShowFilters: boolean;
 
-  @Input() orderViews: boolean;
+  @Input()
+  orderViews: boolean;
 
-  value = '';
+  @Output()
+  outFilterCards = new EventEmitter<string>();
 
-  @Output() outFilterCards = new EventEmitter<string>();
+  @Output()
+  outOrderViews = new EventEmitter<boolean>();
 
-  @Output() outOrderViews = new EventEmitter<boolean>();
+  public value = '';
 
-  title = 'sorting by:';
+  public title = 'sorting by:';
 
-  countCriteria = 'views';
+  public countCriteria = 'views';
 
-  filterCards() {
+  public filterCards() {
     this.outFilterCards.emit(this.value);
   }
 
-  setOrderViews(value: boolean) {
+  public setOrderViews(value: boolean) {
     this.outOrderViews.emit(!value);
   }
 
-  clear() {
+  public clear() {
     this.value = '';
     this.outFilterCards.emit(this.value);
   }

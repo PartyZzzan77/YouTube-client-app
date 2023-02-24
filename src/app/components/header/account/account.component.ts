@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./account.component.scss'],
 })
 export class AccountComponent {
-  title = 'your name';
+  public title = 'your name';
 }

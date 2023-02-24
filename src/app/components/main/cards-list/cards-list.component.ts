@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ResponseItem } from '../../../shared/models/response-item/response-item.model';
+import { ResponseItem } from 'src/app/shared/models/response-item/response-item.model';
 
 @Component({
   selector: 'app-card-list',
@@ -7,5 +7,6 @@ import { ResponseItem } from '../../../shared/models/response-item/response-item
   styleUrls: ['./cards-list.component.scss'],
 })
 export class CardsListComponent {
-  @Input() entities: ResponseItem[] = [];
+  @Input()
+  entities: ResponseItem[] = [];
 }
