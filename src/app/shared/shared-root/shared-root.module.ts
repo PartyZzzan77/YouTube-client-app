@@ -11,18 +11,18 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatBadgeModule } from '@angular/material/badge';
 
-import { SharedRootComponent } from 'src/app/shared/modules/shared-root/components/shared-root/shared-root.component';
-import { HeaderComponent } from 'src/app/components/header/header.component';
+import { SharedRootComponent } from 'src/app/shared/shared-root/components/shared-root/shared-root.component';
+import { HeaderComponent } from 'src/app/core/components/header/header.component';
 import { MainComponent } from 'src/app/components/main/main.component';
 import { CardsListComponent } from 'src/app/components/main/cards-list/cards-list.component';
 import { CardComponent } from 'src/app/components/main/card/card.component';
-import { SearchComponent } from 'src/app/components/header/search/search.component';
+import { SearchComponent } from 'src/app/core/components/header/search/search.component';
 import { FilterComponent } from 'src/app/components/filter/filter.component';
-import { AccountComponent } from 'src/app/components/header/account/account.component';
+import { AccountComponent } from 'src/app/core/components/header/account/account.component';
 import { StatisticsComponent } from 'src/app/components/main/card/statistics/statistics.component';
 import { PublicationDateStatusDirective } from 'src/app/derectives/publication-date-status.directive';
-import { CardMatchPipe } from 'src/app/pipes/card-match.pipe';
-import { OrderPipe } from 'src/app/pipes/order.pipe';
+import { CardMatchPipe } from 'src/app/shared/pipes/card-match.pipe';
+import { OrderPipe } from 'src/app/shared/pipes/order.pipe';
 
 @NgModule({
   declarations: [

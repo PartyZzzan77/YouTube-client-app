@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ResponseItem } from '../shared/models/response-item/response-item.model';
+import { ResponseItem } from '../models/response-item/response-item.model';
 
 @Pipe({
   name: 'cardMatch',

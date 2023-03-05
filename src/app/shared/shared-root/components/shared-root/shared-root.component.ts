@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { mockEntities } from '../../../../../mocks/mock';
-import { ResponseItem } from '../../../../models/response-item/response-item.model';
+import { mockEntities } from '../../../../mocks/mock';
+import { ResponseItem } from '../../../models/response-item/response-item.model';
 
 @Component({
   selector: 'app-shared-root',
