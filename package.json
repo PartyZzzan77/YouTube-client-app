@@ -7,11 +7,19 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint --fix"
+    "lint": "ng lint --fix",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "co": "npx cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged --relative"
+      "pre-commit": "lint-staged --relative",
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
   },
   "lint-staged": {
@@ -61,6 +69,7 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
-    "typescript": "~4.9.4"
+    "typescript": "~4.9.4",
+    "cz-conventional-changelog": "^3.3.0"
   }
 }

@@ -8,8 +8,20 @@ import { StatisticsComponent } from './components/main/card/statistics/statistic
 import { PublicationDateStatusDirective } from '../shared/directives/publication-date-status.directive';
 
 @NgModule({
-  declarations: [MainComponent, CardsListComponent, CardComponent, StatisticsComponent, PublicationDateStatusDirective],
+  declarations: [
+    MainComponent,
+    CardsListComponent,
+    CardComponent,
+    StatisticsComponent,
+    PublicationDateStatusDirective,
+  ],
   imports: [CommonModule, AngularMuiModule],
-  exports: [MainComponent, CardsListComponent, CardComponent, StatisticsComponent, PublicationDateStatusDirective],
+  exports: [
+    MainComponent,
+    CardsListComponent,
+    CardComponent,
+    StatisticsComponent,
+    PublicationDateStatusDirective,
+  ],
 })
 export class YoutubeModule {}

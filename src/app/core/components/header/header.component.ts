@@ -16,9 +16,6 @@ export class HeaderComponent {
   outShowCards = new EventEmitter<boolean>();
 
   @Output()
-  outFilterCards = new EventEmitter<string>();
-
-  @Output()
   outOrderViews = new EventEmitter<boolean>();
 
   public isShowFilters = false;
@@ -29,10 +26,6 @@ export class HeaderComponent {
 
   public showCards() {
     this.outShowCards.emit(true);
-  }
-
-  public filterCards(value: string) {
-    this.outFilterCards.emit(value);
   }
 
   public setOrderViews(value: boolean) {

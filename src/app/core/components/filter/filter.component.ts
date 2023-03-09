@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CardService } from '../../services/card.service';
 
 @Component({
   selector: 'app-filter',
@@ -13,9 +14,6 @@ export class FilterComponent {
   orderViews: boolean;
 
   @Output()
-  outFilterCards = new EventEmitter<string>();
-
-  @Output()
   outOrderViews = new EventEmitter<boolean>();
 
   public value = '';
@@ -24,16 +22,17 @@ export class FilterComponent {
 
   public countCriteria = 'views';
 
-  public filterCards() {
-    this.outFilterCards.emit(this.value);
+  public filterCards(value: string) {
+    this.cardService.filterEntities(value);
+  }
+
+  public reset() {
+    this.cardService.reset();
   }
 
   public setOrderViews(value: boolean) {
     this.outOrderViews.emit(!value);
   }
 
-  public clear() {
-    this.value = '';
-    this.outFilterCards.emit(this.value);
-  }
+  constructor(private cardService: CardService) {}
 }

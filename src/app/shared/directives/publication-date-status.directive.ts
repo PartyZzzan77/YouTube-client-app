@@ -12,7 +12,9 @@ export class PublicationDateStatusDirective implements OnInit {
   ngOnInit() {
     const currentDate = new Date();
     const publicationDate = new Date(this.date);
-    const timeDifferenceInDays = (currentDate.getTime() - publicationDate.getTime()) / (1000 * 60 * 60 * 24);
+    const timeDifferenceInDays =
+      (currentDate.getTime() - publicationDate.getTime()) /
+      (1000 * 60 * 60 * 24);
     let color: string;
 
     if (timeDifferenceInDays > 180) {

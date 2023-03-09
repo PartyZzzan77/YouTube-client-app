@@ -7,9 +7,13 @@ import { ResponseItem } from '../models/response-item/response-item.model';
 export class OrderPipe implements PipeTransform {
   transform(cards: ResponseItem[], value: boolean): ResponseItem[] {
     if (!value) {
-      return [...cards].sort((a, b) => +a.statistics.viewCount - +b.statistics.viewCount);
+      return [...cards].sort(
+        (a, b) => +a.statistics.viewCount - +b.statistics.viewCount,
+      );
     }
 
-    return [...cards].sort((a, b) => +b.statistics.viewCount - +a.statistics.viewCount);
+    return [...cards].sort(
+      (a, b) => +b.statistics.viewCount - +a.statistics.viewCount,
+    );
   }
 }

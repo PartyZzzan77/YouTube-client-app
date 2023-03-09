@@ -10,13 +10,14 @@
   <mat-form-field style="width: 17.5vw;padding-top: 1.5rem">
     <mat-label>Search</mat-label>
     <input
+      #searchField
       matInput type="text"
       [(ngModel)]="value"
-      (input)="filterCards()">
+      (input)="filterCards(searchField.value.trim())">
     <button
       *ngIf="value"
       matSuffix mat-icon-button aria-label="Clear"
-      (click)="clear()">
+      (click)="reset()">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>

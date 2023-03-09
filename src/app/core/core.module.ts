@@ -8,8 +8,18 @@ import { AccountComponent } from './components/header/account/account.component'
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HeaderComponent, FilterComponent, SearchComponent, AccountComponent],
+  declarations: [
+    HeaderComponent,
+    FilterComponent,
+    SearchComponent,
+    AccountComponent,
+  ],
   imports: [CommonModule, AngularMuiModule, FormsModule],
-  exports: [HeaderComponent, FilterComponent, SearchComponent, AccountComponent],
+  exports: [
+    HeaderComponent,
+    FilterComponent,
+    SearchComponent,
+    AccountComponent,
+  ],
 })
 export class CoreModule {}

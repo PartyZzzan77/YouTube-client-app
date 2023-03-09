@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { mockEntities } from '../../../../mocks/mock';
-import { ResponseItem } from '../../../models/response-item/response-item.model';
 
 @Component({
   selector: 'app-shared-root',
@@ -9,9 +7,6 @@ import { ResponseItem } from '../../../models/response-item/response-item.model'
 })
 export class SharedRootComponent {
   title = 'YouTube-client-app';
-
-  filterSearchString = '';
-
   orderViews: boolean = false;
 
   isShowCards = false;
@@ -20,13 +15,7 @@ export class SharedRootComponent {
     this.isShowCards = true;
   }
 
-  filterCards(value: string) {
-    this.filterSearchString = value;
-  }
-
   setOrderViews(value: boolean) {
     this.orderViews = value;
   }
-
-  entities: ResponseItem[] = mockEntities;
 }

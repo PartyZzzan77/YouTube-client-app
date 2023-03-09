@@ -8,8 +8,12 @@ import { SharedRootModule } from 'src/app/shared/shared-root/shared-root.module'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, SharedRootModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    SharedRootModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
