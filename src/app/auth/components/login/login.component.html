@@ -7,6 +7,8 @@
   <input #passwordField matInput (input)="setPassword(passwordField.value.trim())">
 </mat-form-field>
 
+<p class="auth-error" *ngIf="isInvalid">{{isInvalid}}</p>
+
 <button
   class="login_btn"
   mat-raised-button color="primary"
