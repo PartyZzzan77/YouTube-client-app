@@ -1,0 +1,12 @@
+<div class="search">
+  <app-search
+    (outShowCards)="showCards()"
+    (outToggleFilter)="toggleFilter()"></app-search>
+  <app-filter
+    (outOrderViews)="setOrderViews($event)"
+    (outFilterCards)="filterCards($event)"
+    [orderViews]="orderViews"
+    [isShowFilters]="isShowFilters"
+    *ngIf="isShowFilters"></app-filter>
+</div>
+<app-account></app-account>
