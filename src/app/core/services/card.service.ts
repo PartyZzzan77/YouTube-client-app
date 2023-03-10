@@ -33,4 +33,12 @@ export class CardService {
       this.entities.next(filteredEntities);
     });
   }
+
+  public findOne(id: string) {
+    this.entities$.pipe(take(1)).subscribe((obs) => {
+      const targetEntitie = obs.filter((e) => e.id === id);
+
+      this.entities.next(targetEntitie);
+    });
+  }
 }

@@ -1,0 +1,13 @@
+
+<div class="info">
+  <img class="img" [src]=entity.snippet.thumbnails.maxres.url alt="blank image"/>
+  <div class="info_item"> <strong>Author:</strong> {{entity.snippet.channelTitle}}</div>
+  <div class="info_item" ><strong>Topic:</strong> {{entity.snippet.title}}</div>
+  <div class="like info__item" ><mat-icon color="primary">thumb_up</mat-icon><strong>{{entity.statistics.likeCount}}</strong></div>
+  <p class="description">{{entity.snippet.description}}</p>
+  <button
+    class="search_btn"
+    mat-raised-button color="primary"
+    (click)="goHome()"
+  >{{back|uppercase}}</button>
+</div>
