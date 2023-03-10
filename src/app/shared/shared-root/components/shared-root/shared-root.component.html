@@ -1,6 +1,3 @@
-<app-header
-  (outOrderViews)="setOrderViews($event)"
-  (outShowCards)="showCards()"
-  [orderViews]="orderViews"></app-header>
-<app-main [isShowCards]="isShowCards"></app-main>
+<app-header></app-header>
+<app-main *ngIf="isShowCards"></app-main>
 <router-outlet></router-outlet>

@@ -1,3 +1,1 @@
-<app-card-list
-  *ngIf="isShowCards"
-  [entities]="entities"></app-card-list>
+<app-card-list [entities]="entities|order:isViewsDesc"></app-card-list>

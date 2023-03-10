@@ -11,10 +11,13 @@ import { Subscription } from 'rxjs';
 })
 export class DetailsComponent implements OnInit, OnDestroy {
   private id: string;
+
   public entity: ResponseItem;
+
   private subscription: Subscription;
 
   public back = 'back to home';
+
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
     this.subscription = this.cardService.entities.subscribe(

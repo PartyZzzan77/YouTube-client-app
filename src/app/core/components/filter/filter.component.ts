@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { CardService } from '../../services/card.service';
+import { VisibleConfigService } from '../../services/visible-config.service';
 
 @Component({
   selector: 'app-filter',
@@ -7,15 +8,6 @@ import { CardService } from '../../services/card.service';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent {
-  @Input()
-  isShowFilters: boolean;
-
-  @Input()
-  orderViews: boolean;
-
-  @Output()
-  outOrderViews = new EventEmitter<boolean>();
-
   public value = '';
 
   public title = 'sorting by:';
@@ -30,9 +22,12 @@ export class FilterComponent {
     this.cardService.reset();
   }
 
-  public setOrderViews(value: boolean) {
-    this.outOrderViews.emit(!value);
+  public toggleOrderViews() {
+    this.visibleConfigService.toggleOrderViews();
   }
 
-  constructor(private cardService: CardService) {}
+  constructor(
+    private cardService: CardService,
+    private visibleConfigService: VisibleConfigService,
+  ) {}
 }

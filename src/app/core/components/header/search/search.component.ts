@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { VisibleConfigService } from '../../../services/visible-config.service';
 
 @Component({
   selector: 'app-search',
@@ -6,12 +7,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
-  @Output()
-  outToggleFilter = new EventEmitter<boolean>();
-
-  @Output()
-  outShowCards = new EventEmitter<boolean>();
-
   public value = '';
 
   public title = 'search';
@@ -19,14 +14,16 @@ export class SearchComponent {
   public btnSearchTitle = 'search';
 
   public showFilter() {
-    this.outToggleFilter.emit(true);
+    this.visibleConfigService.toggleFilterVisible();
   }
 
-  public showCards() {
-    this.outShowCards.emit(true);
+  public toggleVisibleCards() {
+    this.visibleConfigService.toggleVisible();
   }
 
   public clear() {
     this.value = '';
   }
+
+  constructor(private visibleConfigService: VisibleConfigService) {}
 }

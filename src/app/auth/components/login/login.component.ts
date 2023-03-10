@@ -9,7 +9,9 @@ export class LoginComponent {
   public SubmitLabel = 'Submit';
 
   public isInvalid = '';
+
   private loginField: string;
+
   private passwordField: string;
 
   private checkAuth = () => {
@@ -23,6 +25,7 @@ export class LoginComponent {
   public setLogin(value: string) {
     this.loginField = value;
   }
+
   public setPassword(value: string) {
     this.passwordField = value;
   }
@@ -40,5 +43,6 @@ export class LoginComponent {
 
     this.router.navigate(['/main']);
   }
+
   constructor(private router: Router) {}
 }

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 })
 export class NotFoundComponent {
   public message = 'Sorry, smth went wrong';
+
   public imageAlt = 'Page not found';
 
   public back = 'back to home';

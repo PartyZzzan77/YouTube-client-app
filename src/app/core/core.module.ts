@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AngularMuiModule } from '../shared/angular-mui/angular-mui.module';
-import { HeaderComponent } from './components/header/header.component';
-import { FilterComponent } from './components/filter/filter.component';
-import { SearchComponent } from './components/header/search/search.component';
-import { AccountComponent } from './components/header/account/account.component';
 import { FormsModule } from '@angular/forms';
+
+import { AngularMuiModule } from 'src/app/shared/angular-mui/angular-mui.module';
+import { HeaderComponent } from 'src/app/core/components/header/header.component';
+import { FilterComponent } from 'src/app/core/components/filter/filter.component';
+import { SearchComponent } from 'src/app/core/components/header/search/search.component';
+import { AccountComponent } from 'src/app/core/components/header/account/account.component';
 
 @NgModule({
   declarations: [

@@ -1,34 +1,27 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { VisibleConfigService } from '../../services/visible-config.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
-  @Input()
-  isShowCards: boolean;
+export class HeaderComponent implements OnInit, OnDestroy {
+  isShowFilter: boolean;
 
-  @Input()
-  orderViews: boolean;
+  showFilterSubscription: Subscription;
 
-  @Output()
-  outShowCards = new EventEmitter<boolean>();
-
-  @Output()
-  outOrderViews = new EventEmitter<boolean>();
-
-  public isShowFilters = false;
-
-  public toggleFilter() {
-    this.isShowFilters = !this.isShowFilters;
+  ngOnInit() {
+    this.showFilterSubscription =
+      this.visibleConfigService.isFilterVisible.subscribe((v) => {
+        this.isShowFilter = v;
+      });
   }
 
-  public showCards() {
-    this.outShowCards.emit(true);
+  ngOnDestroy() {
+    this.showFilterSubscription.unsubscribe();
   }
 
-  public setOrderViews(value: boolean) {
-    this.outOrderViews.emit(value);
-  }
+  constructor(private visibleConfigService: VisibleConfigService) {}
 }
