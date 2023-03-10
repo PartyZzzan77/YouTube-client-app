@@ -6,10 +6,23 @@ import { OrderPipe } from 'src/app/shared/pipes/order.pipe';
 import { AngularMuiModule } from '../angular-mui/angular-mui.module';
 import { CoreModule } from '../../core/core.module';
 import { YoutubeModule } from '../../youtube/youtube.module';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: SharedRootComponent,
+  },
+];
 @NgModule({
   declarations: [SharedRootComponent, OrderPipe],
-  imports: [CommonModule, AngularMuiModule, CoreModule, YoutubeModule],
+  imports: [
+    RouterModule.forChild(routes),
+    CommonModule,
+    AngularMuiModule,
+    CoreModule,
+    YoutubeModule,
+  ],
   exports: [SharedRootComponent],
 })
 export class SharedRootModule {}
