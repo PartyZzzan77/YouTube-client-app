@@ -7,11 +7,13 @@ import { AngularMuiModule } from '../angular-mui/angular-mui.module';
 import { CoreModule } from '../../core/core.module';
 import { YoutubeModule } from '../../youtube/youtube.module';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '../../core/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
     component: SharedRootComponent,
+    canActivate: [AuthGuard],
   },
 ];
 @NgModule({
