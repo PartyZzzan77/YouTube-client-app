@@ -1,0 +1,16 @@
+<mat-form-field appearance="fill">
+  <mat-label>Login</mat-label>
+  <input #loginField matInput (input)="setLogin(loginField.value.trim())">
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Password</mat-label>
+  <input #passwordField matInput (input)="setPassword(passwordField.value.trim())">
+</mat-form-field>
+
+<p class="auth-error" *ngIf="isInvalid">{{isInvalid}}</p>
+
+<button
+  class="login_btn"
+  mat-raised-button color="primary"
+  (click)="handleSubmit()"
+>{{SubmitLabel}}</button>

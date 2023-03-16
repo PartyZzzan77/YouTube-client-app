@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mdc-text-field--filled {
+  background-color: transparent !important;
+}

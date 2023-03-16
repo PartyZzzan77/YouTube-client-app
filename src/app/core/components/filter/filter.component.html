@@ -1,0 +1,23 @@
+ <span >{{title|titlecase}}</span>
+
+  <mat-chip-listbox aria-label="search filter">
+    <mat-chip-option
+      style="min-width: 6rem"
+      color="primary"
+      (click)="toggleOrderViews()">{{countCriteria|titlecase}}</mat-chip-option>
+  </mat-chip-listbox>
+
+  <mat-form-field style="width: 17.5vw;padding-top: 1.5rem">
+    <mat-label>Search</mat-label>
+    <input
+      #searchField
+      matInput type="text"
+      [(ngModel)]="value"
+      (input)="filterCards(searchField.value.trim())">
+    <button
+      *ngIf="value"
+      matSuffix mat-icon-button aria-label="Clear"
+      (click)="reset()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
